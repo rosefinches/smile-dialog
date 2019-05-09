@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_smile_dialog"
+        android:gravity="center"
+        android:minHeight="120dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".SmileDialogFragment">
+
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/anim_warning" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:maxLength="16"
+            android:paddingTop="10dp"
+            android:text="@string/smile_dialog_title"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/smile_dialog_content"
+            android:textColor="#4E4747"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:background="@drawable/bg_smile_dialog_cancel_button"
+                android:minWidth="100dp"
+                android:padding="8dp"
+                android:text="@string/smile_dialog_cancel"
+                android:textColor="@color/smile_dialog_btn_cancel" />
+
+            <TextView
+                android:id="@+id/btn_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="@drawable/bg_smile_dialog_ok_button"
+                android:minWidth="100dp"
+                android:text="@string/smile_dialog_ok"
+                android:textColor="@color/smile_dialog_btn_ok" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:drawable="@drawable/svg_warning"
+    tools:targetApi="lollipop">
+
+    <target
+        android:name="ic_warn"
+        android:animation="@animator/animator_path" />
+
+    <target
+        android:name="ic_round"
+        android:animation="@animator/animator_path" />
+
+</animated-vector>

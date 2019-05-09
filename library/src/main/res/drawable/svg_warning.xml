@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="50dp"
+    android:height="50dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <path
+        android:name="ic_warn"
+        android:pathData="M50,70 L50,20 M50,80 L50,80.2"
+        android:strokeWidth="5"
+        android:strokeColor="@android:color/holo_orange_light"
+        android:strokeLineCap="round" />
+
+    <path
+        android:name="ic_round"
+        android:pathData="M50,2a48,48 0,1 0,48,48A48,48 0,0 0,50,2z"
+        android:strokeWidth="3"
+        android:strokeColor="@android:color/holo_orange_light" />
+
+</vector>

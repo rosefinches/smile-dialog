@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SmileDialogStyle" parent="Theme.AppCompat.Dialog.Alert"></style>
+
+
+    <style name="dialog_anim_style" parent="android:Animation">
+        <!--进入时的动画-->
+        <item name="android:windowEnterAnimation">@anim/smile_dialog_enter</item>
+        <!--退出时的动画-->
+        <item name="android:windowExitAnimation">@anim/smile_dialog_exit</item>
+    </style>
+</resources>

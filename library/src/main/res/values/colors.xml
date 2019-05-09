@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="smile_dialog_btn_ok">#FFFFFF</color>
+    <color name="smile_dialog_btn_cancel">#FFFFFF</color>
+    <color name="test_red">#C92727</color>
+</resources>

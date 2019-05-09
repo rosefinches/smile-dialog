@@ -1,0 +1,25 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="50dp"
+    android:height="50dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <path
+        android:name="ic_err_0"
+        android:pathData="M30,70 L70,30"
+        android:strokeWidth="5"
+        android:strokeColor="@android:color/holo_red_dark"
+        android:strokeLineCap="round" />
+    <path
+        android:name="ic_err_1"
+        android:pathData="M70,70 L30,30"
+        android:strokeWidth="5"
+        android:strokeColor="@android:color/holo_red_dark"
+        android:strokeLineCap="round" />
+
+    <path
+        android:name="ic_round"
+        android:pathData="M50,2a48,48 0,1 0,48,48A48,48 0,0 0,50,2z"
+        android:strokeWidth="3"
+        android:strokeColor="@android:color/holo_red_dark" />
+
+</vector>

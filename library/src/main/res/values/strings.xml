@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="smile_dialog_title">提示</string>
+    <string name="smile_dialog_content">这是一条提示内容信息！</string>
+    <string name="smile_dialog_cancel">取消</string>
+    <string name="smile_dialog_ok">确定</string>
+</resources>
