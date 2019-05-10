@@ -235,7 +235,7 @@ public class DialogBuilder {
     }
 
     public DialogBuilder setConformBgResColor(@ColorRes int color) {
-        mOptions.conformBgColor = ColorStateList.valueOf(ContextCompat.getColor(mOptions.activity, color));
+        mOptions.conformBgColor = ContextCompat.getColorStateList(mOptions.activity, color);
         return this;
     }
 
@@ -258,7 +258,7 @@ public class DialogBuilder {
      * @return 当前builder
      */
     public DialogBuilder setCancelBgResColor(@ColorRes int color) {
-        mOptions.cancelBgColor = ColorStateList.valueOf(ContextCompat.getColor(mOptions.activity, color));
+        mOptions.cancelBgColor = ContextCompat.getColorStateList(mOptions.activity, color);
         return this;
     }
 
@@ -302,7 +302,7 @@ public class DialogBuilder {
      * @return 当前builder
      */
     public DialogBuilder setTitleTextResColor(@ColorRes int color) {
-        mOptions.titleTextColor = ColorStateList.valueOf(ContextCompat.getColor(mOptions.activity, color));
+        mOptions.titleTextColor = ContextCompat.getColorStateList(mOptions.activity, color);
         return this;
     }
 
@@ -335,7 +335,7 @@ public class DialogBuilder {
      * @return 当前builder
      */
     public DialogBuilder setContentTextResColor(@ColorRes int color) {
-        mOptions.contentTextColor = ColorStateList.valueOf(ContextCompat.getColor(mOptions.activity, color));
+        mOptions.contentTextColor = ContextCompat.getColorStateList(mOptions.activity, color);
         return this;
     }
 
@@ -368,7 +368,7 @@ public class DialogBuilder {
      * @return 当前builder
      */
     public DialogBuilder setConformTextResColor(@ColorRes int color) {
-        mOptions.conformTextColor = ColorStateList.valueOf(ContextCompat.getColor(mOptions.activity, color));
+        mOptions.conformTextColor = ContextCompat.getColorStateList(mOptions.activity, color);
         return this;
     }
 
@@ -401,7 +401,7 @@ public class DialogBuilder {
      * @return 当前builder
      */
     public DialogBuilder setCancelTextResColor(@ColorRes int color) {
-        mOptions.cancelTextColor = ColorStateList.valueOf(ContextCompat.getColor(mOptions.activity, color));
+        mOptions.cancelTextColor = ContextCompat.getColorStateList(mOptions.activity, color);
         return this;
     }
 
