@@ -2,7 +2,7 @@ package com.rosefinches.smiledialog;
 
 import android.content.res.ColorStateList;
 
-import com.rosefinches.smiledialog.enums.DialogType;
+import com.rosefinches.smiledialog.enums.SmileDialogType;
 import com.rosefinches.smiledialog.interfac.OnCancelClickListener;
 import com.rosefinches.smiledialog.interfac.OnConformClickListener;
 
@@ -20,7 +20,7 @@ import androidx.core.content.ContextCompat;
  * Email:js_wangbl@hotmail.com
  * Description: builder类
  */
-public class DialogBuilder {
+public class SmileDialogBuilder {
 
     private DialogOptions mOptions;
 
@@ -29,8 +29,8 @@ public class DialogBuilder {
      *
      * @param activity activity
      */
-    public DialogBuilder(AppCompatActivity activity) {
-        this(activity, DialogType.WARNING);
+    public SmileDialogBuilder(AppCompatActivity activity) {
+        this(activity, SmileDialogType.WARNING);
     }
 
 
@@ -40,7 +40,7 @@ public class DialogBuilder {
      * @param activity activity
      * @param type     对话框类型
      */
-    public DialogBuilder(AppCompatActivity activity, DialogType type) {
+    public SmileDialogBuilder(AppCompatActivity activity, SmileDialogType type) {
         mOptions = new DialogOptions();
         mOptions.activity = activity;
         mOptions.type = type;
@@ -52,7 +52,7 @@ public class DialogBuilder {
      * @param text 文字
      * @return this
      */
-    public DialogBuilder setTitleText(@NonNull CharSequence text) {
+    public SmileDialogBuilder setTitleText(@NonNull CharSequence text) {
         mOptions.titleText = text;
         return this;
     }
@@ -63,7 +63,7 @@ public class DialogBuilder {
      * @param res 文字资源
      * @return this
      */
-    public DialogBuilder setTitleText(@StringRes int res) {
+    public SmileDialogBuilder setTitleText(@StringRes int res) {
         mOptions.titleText = mOptions.activity.getText(res);
         return this;
     }
@@ -75,7 +75,7 @@ public class DialogBuilder {
      * @param text 文字
      * @return this
      */
-    public DialogBuilder setContentText(@NonNull CharSequence text) {
+    public SmileDialogBuilder setContentText(@NonNull CharSequence text) {
         mOptions.contentText = text;
         return this;
     }
@@ -86,7 +86,7 @@ public class DialogBuilder {
      * @param res 文字资源
      * @return this
      */
-    public DialogBuilder setContentText(@StringRes int res) {
+    public SmileDialogBuilder setContentText(@StringRes int res) {
         mOptions.contentText = mOptions.activity.getText(res);
         return this;
     }
@@ -98,7 +98,7 @@ public class DialogBuilder {
      * @param listener 监听事件
      * @return this
      */
-    public DialogBuilder setOnConformClickListener(OnConformClickListener listener) {
+    public SmileDialogBuilder setOnConformClickListener(OnConformClickListener listener) {
         mOptions.conformClickListener = listener;
         return this;
     }
@@ -109,7 +109,7 @@ public class DialogBuilder {
      * @param listener 监听
      * @return this
      */
-    public DialogBuilder setOnCancelClickListener(OnCancelClickListener listener) {
+    public SmileDialogBuilder setOnCancelClickListener(OnCancelClickListener listener) {
         mOptions.cancelClickListener = listener;
         return this;
     }
@@ -121,7 +121,7 @@ public class DialogBuilder {
      * @param listener 监听
      * @return this
      */
-    public DialogBuilder setConformButton(@NonNull CharSequence text, OnConformClickListener listener) {
+    public SmileDialogBuilder setConformButton(@NonNull CharSequence text, OnConformClickListener listener) {
         mOptions.conformText = text;
         mOptions.conformClickListener = listener;
         return this;
@@ -133,7 +133,7 @@ public class DialogBuilder {
      * @param text 文字
      * @return this
      */
-    public DialogBuilder setConformButton(@NonNull CharSequence text) {
+    public SmileDialogBuilder setConformButton(@NonNull CharSequence text) {
         mOptions.conformText = text;
         return this;
     }
@@ -144,7 +144,7 @@ public class DialogBuilder {
      * @param res 文字资源
      * @return this
      */
-    public DialogBuilder setConformButton(@StringRes int res) {
+    public SmileDialogBuilder setConformButton(@StringRes int res) {
         mOptions.conformText = mOptions.activity.getText(res);
         return this;
     }
@@ -157,7 +157,7 @@ public class DialogBuilder {
      * @param listener 监听
      * @return this
      */
-    public DialogBuilder setConformButton(@StringRes int res, OnConformClickListener listener) {
+    public SmileDialogBuilder setConformButton(@StringRes int res, OnConformClickListener listener) {
         mOptions.conformText = mOptions.activity.getText(res);
         mOptions.conformClickListener = listener;
         return this;
@@ -170,7 +170,7 @@ public class DialogBuilder {
      * @param text 文字
      * @return this
      */
-    public DialogBuilder setCancelButton(@NonNull CharSequence text) {
+    public SmileDialogBuilder setCancelButton(@NonNull CharSequence text) {
         mOptions.cancelText = text;
         return this;
     }
@@ -181,7 +181,7 @@ public class DialogBuilder {
      * @param res 文字Resource
      * @return 当前builder
      */
-    public DialogBuilder setCancelButton(@StringRes int res) {
+    public SmileDialogBuilder setCancelButton(@StringRes int res) {
         mOptions.cancelText = mOptions.activity.getText(res);
         return this;
     }
@@ -193,7 +193,7 @@ public class DialogBuilder {
      * @param text     文字
      * @return this
      */
-    public DialogBuilder setCancelButton(@NonNull CharSequence text, OnCancelClickListener listener) {
+    public SmileDialogBuilder setCancelButton(@NonNull CharSequence text, OnCancelClickListener listener) {
         mOptions.cancelText = text;
         mOptions.cancelClickListener = listener;
         return this;
@@ -206,7 +206,7 @@ public class DialogBuilder {
      * @param listener 监听
      * @return 当前builder
      */
-    public DialogBuilder setCancelButton(@StringRes int res, OnCancelClickListener listener) {
+    public SmileDialogBuilder setCancelButton(@StringRes int res, OnCancelClickListener listener) {
         mOptions.cancelText = mOptions.activity.getText(res);
         mOptions.cancelClickListener = listener;
         return this;
@@ -218,7 +218,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setConformBgColor(@ColorInt int color) {
+    public SmileDialogBuilder setConformBgColor(@ColorInt int color) {
         mOptions.conformBgColor = ColorStateList.valueOf(color);
         return this;
     }
@@ -229,12 +229,12 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setConformBgColor(ColorStateList color) {
+    public SmileDialogBuilder setConformBgColor(ColorStateList color) {
         mOptions.conformBgColor = color;
         return this;
     }
 
-    public DialogBuilder setConformBgResColor(@ColorRes int color) {
+    public SmileDialogBuilder setConformBgResColor(@ColorRes int color) {
         mOptions.conformBgColor = ContextCompat.getColorStateList(mOptions.activity, color);
         return this;
     }
@@ -246,7 +246,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setCancelBgColor(ColorStateList color) {
+    public SmileDialogBuilder setCancelBgColor(ColorStateList color) {
         mOptions.cancelBgColor = color;
         return this;
     }
@@ -257,7 +257,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setCancelBgResColor(@ColorRes int color) {
+    public SmileDialogBuilder setCancelBgResColor(@ColorRes int color) {
         mOptions.cancelBgColor = ContextCompat.getColorStateList(mOptions.activity, color);
         return this;
     }
@@ -268,7 +268,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setCancelBgColor(@ColorInt int color) {
+    public SmileDialogBuilder setCancelBgColor(@ColorInt int color) {
         mOptions.cancelBgColor = ColorStateList.valueOf(color);
         return this;
     }
@@ -279,7 +279,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setTitleTextColor(@ColorInt int color) {
+    public SmileDialogBuilder setTitleTextColor(@ColorInt int color) {
         mOptions.titleTextColor = ColorStateList.valueOf(color);
         return this;
     }
@@ -290,7 +290,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setTitleTextColor(ColorStateList color) {
+    public SmileDialogBuilder setTitleTextColor(ColorStateList color) {
         mOptions.titleTextColor = color;
         return this;
     }
@@ -301,7 +301,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setTitleTextResColor(@ColorRes int color) {
+    public SmileDialogBuilder setTitleTextResColor(@ColorRes int color) {
         mOptions.titleTextColor = ContextCompat.getColorStateList(mOptions.activity, color);
         return this;
     }
@@ -312,7 +312,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setContentTextColor(@ColorInt int color) {
+    public SmileDialogBuilder setContentTextColor(@ColorInt int color) {
         mOptions.contentTextColor = ColorStateList.valueOf(color);
         return this;
     }
@@ -323,7 +323,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setContentTextColor(ColorStateList color) {
+    public SmileDialogBuilder setContentTextColor(ColorStateList color) {
         mOptions.contentTextColor = color;
         return this;
     }
@@ -334,7 +334,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setContentTextResColor(@ColorRes int color) {
+    public SmileDialogBuilder setContentTextResColor(@ColorRes int color) {
         mOptions.contentTextColor = ContextCompat.getColorStateList(mOptions.activity, color);
         return this;
     }
@@ -345,7 +345,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setConformTextColor(@ColorInt int color) {
+    public SmileDialogBuilder setConformTextColor(@ColorInt int color) {
         mOptions.conformTextColor = ColorStateList.valueOf(color);
         return this;
     }
@@ -356,7 +356,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setConformTextColor(ColorStateList color) {
+    public SmileDialogBuilder setConformTextColor(ColorStateList color) {
         mOptions.conformTextColor = color;
         return this;
     }
@@ -367,7 +367,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setConformTextResColor(@ColorRes int color) {
+    public SmileDialogBuilder setConformTextResColor(@ColorRes int color) {
         mOptions.conformTextColor = ContextCompat.getColorStateList(mOptions.activity, color);
         return this;
     }
@@ -378,7 +378,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setCancelTextColor(@ColorInt int color) {
+    public SmileDialogBuilder setCancelTextColor(@ColorInt int color) {
         mOptions.cancelTextColor = ColorStateList.valueOf(color);
         return this;
     }
@@ -389,7 +389,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setCancelTextColor(ColorStateList color) {
+    public SmileDialogBuilder setCancelTextColor(ColorStateList color) {
         mOptions.cancelTextColor = color;
         return this;
     }
@@ -400,7 +400,7 @@ public class DialogBuilder {
      * @param color 颜色
      * @return 当前builder
      */
-    public DialogBuilder setCancelTextResColor(@ColorRes int color) {
+    public SmileDialogBuilder setCancelTextResColor(@ColorRes int color) {
         mOptions.cancelTextColor = ContextCompat.getColorStateList(mOptions.activity, color);
         return this;
     }
@@ -411,7 +411,7 @@ public class DialogBuilder {
      * @param isHided 是否隐藏
      * @return this
      */
-    public DialogBuilder hideTitle(boolean isHided) {
+    public SmileDialogBuilder hideTitle(boolean isHided) {
         mOptions.isTitleHided = isHided;
         return this;
     }
@@ -423,7 +423,7 @@ public class DialogBuilder {
      * @param cancelable 是否可取消
      * @return this
      */
-    public DialogBuilder setCancelable(boolean cancelable) {
+    public SmileDialogBuilder setCancelable(boolean cancelable) {
         mOptions.cancelable = cancelable;
         return this;
     }
@@ -431,10 +431,10 @@ public class DialogBuilder {
     /**
      * 点击区域外是否取消
      *
-     * @param cancelableOnTouchOutside
-     * @return
+     * @param cancelableOnTouchOutside 是否取消
+     * @return this
      */
-    public DialogBuilder setCanceledOnTouchOutside(boolean cancelableOnTouchOutside) {
+    public SmileDialogBuilder setCanceledOnTouchOutside(boolean cancelableOnTouchOutside) {
         mOptions.cancelableOnTouchOutside = cancelableOnTouchOutside;
         return this;
     }
@@ -442,11 +442,22 @@ public class DialogBuilder {
     /**
      * 设置窗体动画
      *
-     * @param style
-     * @return
+     * @param style 动画风格
+     * @return this
      */
-    public DialogBuilder setWindowAnimations(@StyleRes int style) {
+    public SmileDialogBuilder setWindowAnimations(@StyleRes int style) {
         mOptions.windowAnimation = style;
+        return this;
+    }
+
+    /**
+     * 隐藏Icon
+     *
+     * @param isHide 是否隐藏
+     * @return this
+     */
+    public SmileDialogBuilder hideIcon(boolean isHide) {
+        mOptions.isIconHided = isHide;
         return this;
     }
 

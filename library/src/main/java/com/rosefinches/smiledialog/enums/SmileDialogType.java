@@ -1,6 +1,6 @@
 package com.rosefinches.smiledialog.enums;
 
-public enum DialogType {
+public enum SmileDialogType {
 
     WARNING, SUCCESS, ERROR;
 }

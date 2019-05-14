@@ -4,9 +4,9 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 
-import com.rosefinches.smiledialog.DialogBuilder;
+import com.rosefinches.smiledialog.SmileDialogBuilder;
 import com.rosefinches.smiledialog.SmileDialog;
-import com.rosefinches.smiledialog.enums.DialogType;
+import com.rosefinches.smiledialog.enums.SmileDialogType;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SmileDialog dialog = new DialogBuilder(MainActivity.this).build();
+                SmileDialog dialog = new SmileDialogBuilder(MainActivity.this).hideIcon(true).build();
 
 
                 dialog.show();
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SmileDialog dialog = new DialogBuilder(MainActivity.this, DialogType.ERROR)
+                SmileDialog dialog = new SmileDialogBuilder(MainActivity.this, SmileDialogType.ERROR)
                         .setTitleText(R.string.app_name)
                         .setTitleText("222")
                         .setContentText(null)
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SmileDialog dialog = new DialogBuilder(MainActivity.this, DialogType.SUCCESS).build();
+                SmileDialog dialog = new SmileDialogBuilder(MainActivity.this, SmileDialogType.SUCCESS).build();
                 dialog.show();
             }
         });

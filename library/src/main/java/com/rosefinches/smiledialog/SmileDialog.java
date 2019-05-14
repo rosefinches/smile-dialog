@@ -98,6 +98,8 @@ public class SmileDialog implements SmileDialogImpl, SmileDialogFragment.OnFragm
         if (mOptions.windowAnimation != null) {
             mDialogFragment.getDialog().getWindow().setWindowAnimations(mOptions.windowAnimation);
         }
+        //隐藏Icon
+        mDialogFragment.hideIcon(mOptions.isIconHided);
 
     }
 }

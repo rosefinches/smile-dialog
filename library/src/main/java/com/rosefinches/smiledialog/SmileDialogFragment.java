@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.rosefinches.smiledialog.enums.DialogType;
+import com.rosefinches.smiledialog.enums.SmileDialogType;
 import com.rosefinches.smiledialog.interfac.OnCancelClickListener;
 import com.rosefinches.smiledialog.interfac.OnConformClickListener;
 
@@ -95,16 +95,16 @@ public class SmileDialogFragment extends DialogFragment {
      *
      * @param type 类型
      */
-    void setDialogType(DialogType type) {
-        if (type == DialogType.WARNING) {
+    void setDialogType(SmileDialogType type) {
+        if (type == SmileDialogType.WARNING) {
             mIcon.setImageResource(R.drawable.anim_warning);
         }
 
-        if (type == DialogType.SUCCESS) {
+        if (type == SmileDialogType.SUCCESS) {
             mIcon.setImageResource(R.drawable.anim_success);
         }
 
-        if (type == DialogType.ERROR) {
+        if (type == SmileDialogType.ERROR) {
             mIcon.setImageResource(R.drawable.anim_error);
         }
 
@@ -243,6 +243,16 @@ public class SmileDialogFragment extends DialogFragment {
         if (button != null)
             setButtonColor(button, color);
 
+    }
+
+    /**
+     * 隐藏Icon
+     * @param isHide 是否隐藏
+     */
+    void hideIcon(boolean isHide){
+        if (isHide){
+            mIcon.setVisibility(View.GONE);
+        }else mIcon.setVisibility(View.VISIBLE);
     }
 
 
