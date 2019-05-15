@@ -2,7 +2,7 @@
 ============
 使用DialogFragment封装了简单的提示框，用Vector实现简单的动画效果，让提示框更有活力
 
-![效果图](https://github.com/rosefinches/smile-dialog/blob/master/img/show.gif = 300x)
+![效果图](https://github.com/rosefinches/smile-dialog/blob/master/img/show.gif)
 ============
 ### 基本使用
 #### 1.添加Gradle依赖
