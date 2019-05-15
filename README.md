@@ -1,7 +1,7 @@
 :smile:smile-dialog:smile:
 ============
 使用DialogFragment封装了简单的提示框，用Vector实现简单的动画效果，让提示框更有活力
-<img src="img/show.gif" width="150"/>
+</br><img src="img/show.gif" width="150"/>
 ============
 ### 基本使用
 #### 1.添加Gradle依赖
