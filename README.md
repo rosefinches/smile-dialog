@@ -43,11 +43,11 @@
                 dialog.show();
 ```
 ### 更多API，请查看一下表格
-> 说明：
->>1.所有设置文字的方法，参数都有两种，分别是（@NonNull CharSequence text）和（@StringRes int res）;
->>2.所有设置颜色的方法，参数有三种，分别是(@ColorInt int color)、(ColorStateList color) 和(@ColorRes int color) ，前两者是setXXXColor()，后者为setResColor();
->>3.设置按钮文字时，如果只有一个参数，则为按钮文字，如有第二个参数，则表示给按钮添加点击事件
->>4.所有方法都是有参数的，参数请参考实际代码
+说明：
+- 所有设置文字的方法，参数都有两种，分别是（@NonNull CharSequence text）和（@StringRes int res）;
++ 所有设置颜色的方法，参数有三种，分别是(@ColorInt int color)、(ColorStateList color) 和(@ColorRes int color) ，前两者是setXXXColor()，后者为setResColor();
+- 设置按钮文字时，如果只有一个参数，则为按钮文字，如有第二个参数，则表示给按钮添加点击事件
++ 所有方法都是有参数的，参数请参考实际代码
 
 | 方法                                                                          | 说明                                  |
 |-------------------------------------------------------------------------------|-------------------------------------|
