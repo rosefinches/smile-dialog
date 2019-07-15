@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
                 SmileDialog dialog = new SmileDialogBuilder(MainActivity.this, SmileDialogType.ERROR)
                         .setTitleText(R.string.app_name)
-                        .setTitleText("222")
                         .setContentText(null)
                         .setConformBgResColor(R.color.colorPrimary)
                         .setTitleTextResColor(R.color.colorAccent)
@@ -44,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
 //                        .setCanceledOnTouchOutside(false)
 //                        .setCancelable(false)
 //                .hideTitle(true)
-                        .setConformButton("sss")
                         .setWindowAnimations(R.style.dialog_style)
                         .build();
 

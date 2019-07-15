@@ -40,7 +40,7 @@ public class SmileDialogBuilder {
      * @param activity activity
      * @param type     对话框类型
      */
-    public SmileDialogBuilder(AppCompatActivity activity, SmileDialogType type) {
+    public SmileDialogBuilder(AppCompatActivity activity, @SmileDialogType int type) {
         mOptions = new DialogOptions();
         mOptions.activity = activity;
         mOptions.type = type;
