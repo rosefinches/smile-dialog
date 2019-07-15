@@ -21,6 +21,7 @@ import androidx.core.view.ViewCompat;
 import androidx.fragment.app.DialogFragment;
 
 import com.rosefinches.smiledialog.enums.SmileDialogType;
+import com.rosefinches.smiledialog.enums.WidgetTypes;
 import com.rosefinches.smiledialog.interfac.OnCancelClickListener;
 import com.rosefinches.smiledialog.interfac.OnConformClickListener;
 
@@ -162,19 +163,19 @@ public class SmileDialogFragment extends DialogFragment {
      * @param widgets 控件枚举
      * @return 控件
      */
-    private TextView getTextViewByEnum(DialogOptions.Widgets widgets) {
+    private TextView getTextViewByWidgetType(@WidgetTypes int widgets) {
 
-        if (widgets == DialogOptions.Widgets.TITLE) {
+        if (widgets == WidgetTypes.TITLE) {
             return mTitle;
         }
-        if (widgets == DialogOptions.Widgets.CONTENT) {
+        if (widgets == WidgetTypes.CONTENT) {
             return mContent;
         }
-        if (widgets == DialogOptions.Widgets.CONFORM) {
+        if (widgets == WidgetTypes.CONFORM) {
 
             return mOk;
         }
-        if (widgets == DialogOptions.Widgets.CANCEL) {
+        if (widgets == WidgetTypes.CANCEL) {
             return mCancel;
         }
         return null;
@@ -186,8 +187,8 @@ public class SmileDialogFragment extends DialogFragment {
      * @param widgets 控件枚举
      * @param text    文字
      */
-    void setText(DialogOptions.Widgets widgets, CharSequence text) {
-        TextView mText = getTextViewByEnum(widgets);
+    void setText(@WidgetTypes int widgets, CharSequence text) {
+        TextView mText = getTextViewByWidgetType(widgets);
         if (mText != null) {
             mText.setText(text);
         }
@@ -224,8 +225,8 @@ public class SmileDialogFragment extends DialogFragment {
      * @param widgets 控件
      * @param color   颜色
      */
-    void setTextColor(DialogOptions.Widgets widgets, ColorStateList color) {
-        TextView mText = getTextViewByEnum(widgets);
+    void setTextColor(@WidgetTypes int widgets, ColorStateList color) {
+        TextView mText = getTextViewByWidgetType(widgets);
         if (mText != null)
             mText.setTextColor(color);
 
@@ -238,8 +239,8 @@ public class SmileDialogFragment extends DialogFragment {
      * @param widgets 控件
      * @param color   颜色
      */
-    void setButtonBgColor(DialogOptions.Widgets widgets, ColorStateList color) {
-        TextView button = getTextViewByEnum(widgets);
+    void setButtonBgColor(@WidgetTypes int widgets, ColorStateList color) {
+        TextView button = getTextViewByWidgetType(widgets);
         if (button != null)
             setButtonColor(button, color);
 

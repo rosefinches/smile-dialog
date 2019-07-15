@@ -2,9 +2,10 @@ package com.rosefinches.smiledialog;
 
 import android.os.Build;
 
-import com.rosefinches.smiledialog.interfac.SmileDialogImpl;
-
 import androidx.annotation.RequiresApi;
+
+import com.rosefinches.smiledialog.enums.WidgetTypes;
+import com.rosefinches.smiledialog.interfac.SmileDialogImpl;
 
 public class SmileDialog implements SmileDialogImpl, SmileDialogFragment.OnFragmentCreatedListener {
 
@@ -44,45 +45,45 @@ public class SmileDialog implements SmileDialogImpl, SmileDialogFragment.OnFragm
         mDialogFragment.setDialogType(mOptions.type);
         //TITLE，设置文字
         if (mOptions.titleText != null) {
-            mDialogFragment.setText(DialogOptions.Widgets.TITLE, mOptions.titleText);
+            mDialogFragment.setText(WidgetTypes.TITLE, mOptions.titleText);
         }
         //CONTENT，设置文字，
         if (mOptions.contentText != null) {
-            mDialogFragment.setText(DialogOptions.Widgets.CONTENT, mOptions.contentText);
+            mDialogFragment.setText(WidgetTypes.CONTENT, mOptions.contentText);
         }
         //确认按钮，设置文字
         if (mOptions.conformText != null) {
-            mDialogFragment.setText(DialogOptions.Widgets.CONFORM, mOptions.conformText);
+            mDialogFragment.setText(WidgetTypes.CONFORM, mOptions.conformText);
         }
         //取消按钮，设置文字,null时隐藏
         if (mOptions.cancelText != null) {
-            mDialogFragment.setText(DialogOptions.Widgets.CANCEL, mOptions.cancelText);
+            mDialogFragment.setText(WidgetTypes.CANCEL, mOptions.cancelText);
         } else {
             mDialogFragment.hideCancelButton(true);
         }
         //设置确认按钮背景颜色
         if (mOptions.conformBgColor != null) {
-            mDialogFragment.setButtonBgColor(DialogOptions.Widgets.CONFORM, mOptions.conformBgColor);
+            mDialogFragment.setButtonBgColor(WidgetTypes.CONFORM, mOptions.conformBgColor);
         }
         //设置取消按钮背景颜色
         if (mOptions.cancelBgColor != null)
-            mDialogFragment.setButtonBgColor(DialogOptions.Widgets.CANCEL, mOptions.cancelBgColor);
+            mDialogFragment.setButtonBgColor(WidgetTypes.CANCEL, mOptions.cancelBgColor);
 
         //设置标题字体颜色
         if (mOptions.titleTextColor != null) {
-            mDialogFragment.setTextColor(DialogOptions.Widgets.TITLE, mOptions.titleTextColor);
+            mDialogFragment.setTextColor(WidgetTypes.TITLE, mOptions.titleTextColor);
         }
         //设置内容字体颜色
         if (mOptions.contentTextColor != null) {
-            mDialogFragment.setTextColor(DialogOptions.Widgets.CONTENT, mOptions.contentTextColor);
+            mDialogFragment.setTextColor(WidgetTypes.CONTENT, mOptions.contentTextColor);
         }
         //设置确认按钮字体颜色
         if (mOptions.conformTextColor != null) {
-            mDialogFragment.setTextColor(DialogOptions.Widgets.CONFORM, mOptions.conformTextColor);
+            mDialogFragment.setTextColor(WidgetTypes.CONFORM, mOptions.conformTextColor);
         }
         //设置取消按钮字体颜色
         if (mOptions.cancelTextColor != null) {
-            mDialogFragment.setTextColor(DialogOptions.Widgets.CANCEL, mOptions.cancelTextColor);
+            mDialogFragment.setTextColor(WidgetTypes.CANCEL, mOptions.cancelTextColor);
         }
         //标题隐藏
         mDialogFragment.hideTitle(mOptions.isTitleHided);

@@ -16,10 +16,6 @@ import com.rosefinches.smiledialog.interfac.OnConformClickListener;
  */
 class DialogOptions {
 
-    enum Widgets {
-        TITLE, CONTENT, CONFORM, CANCEL
-    }
-
     AppCompatActivity activity;
 
     //标题、内容、取消按钮、确定按钮文字（String）
