@@ -57,6 +57,11 @@ public class SmileDialogBuilder {
         return this;
     }
 
+    public SmileDialogBuilder setTextSize(@NonNull Float textSize) {
+        mOptions.textSize = textSize;
+        return this;
+    }
+
     /**
      * 设置title文字
      *

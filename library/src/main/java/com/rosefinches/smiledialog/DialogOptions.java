@@ -26,6 +26,7 @@ class DialogOptions {
     ColorStateList titleTextColor, contentTextColor, conformTextColor, cancelTextColor;
     //标题隐藏、Icon隐藏
     boolean isTitleHided, isIconHided;
+    float textSize;
     //确认按钮监听
     OnConformClickListener conformClickListener;
     //取消按钮监听

@@ -187,10 +187,11 @@ public class SmileDialogFragment extends DialogFragment {
      * @param widgets 控件枚举
      * @param text    文字
      */
-    void setText(@WidgetTypes int widgets, CharSequence text) {
+    void setText(@WidgetTypes int widgets, CharSequence text, Float textSize) {
         TextView mText = getTextViewByWidgetType(widgets);
         if (mText != null) {
             mText.setText(text);
+            mText.setTextSize(textSize);
         }
     }
 
@@ -225,11 +226,12 @@ public class SmileDialogFragment extends DialogFragment {
      * @param widgets 控件
      * @param color   颜色
      */
-    void setTextColor(@WidgetTypes int widgets, ColorStateList color) {
+    void setTextColor(@WidgetTypes int widgets, ColorStateList color, Float textSize) {
         TextView mText = getTextViewByWidgetType(widgets);
-        if (mText != null)
+        if (mText != null) {
             mText.setTextColor(color);
-
+            mText.setTextSize(textSize);
+        }
     }
 
 
