@@ -45,19 +45,19 @@ public class SmileDialog implements SmileDialogImpl, SmileDialogFragment.OnFragm
         mDialogFragment.setDialogType(mOptions.type);
         //TITLE，设置文字
         if (mOptions.titleText != null) {
-            mDialogFragment.setText(WidgetTypes.TITLE, mOptions.titleText);
+            mDialogFragment.setText(WidgetTypes.TITLE, mOptions.titleText, mOptions.textSize);
         }
         //CONTENT，设置文字，
         if (mOptions.contentText != null) {
-            mDialogFragment.setText(WidgetTypes.CONTENT, mOptions.contentText);
+            mDialogFragment.setText(WidgetTypes.CONTENT, mOptions.contentText, mOptions.textSize);
         }
         //确认按钮，设置文字
         if (mOptions.conformText != null) {
-            mDialogFragment.setText(WidgetTypes.CONFORM, mOptions.conformText);
+            mDialogFragment.setText(WidgetTypes.CONFORM, mOptions.conformText, mOptions.textSize);
         }
         //取消按钮，设置文字,null时隐藏
         if (mOptions.cancelText != null) {
-            mDialogFragment.setText(WidgetTypes.CANCEL, mOptions.cancelText);
+            mDialogFragment.setText(WidgetTypes.CANCEL, mOptions.cancelText, mOptions.textSize);
         } else {
             mDialogFragment.hideCancelButton(true);
         }
@@ -71,19 +71,19 @@ public class SmileDialog implements SmileDialogImpl, SmileDialogFragment.OnFragm
 
         //设置标题字体颜色
         if (mOptions.titleTextColor != null) {
-            mDialogFragment.setTextColor(WidgetTypes.TITLE, mOptions.titleTextColor);
+            mDialogFragment.setTextColor(WidgetTypes.TITLE, mOptions.titleTextColor, mOptions.textSize);
         }
         //设置内容字体颜色
         if (mOptions.contentTextColor != null) {
-            mDialogFragment.setTextColor(WidgetTypes.CONTENT, mOptions.contentTextColor);
+            mDialogFragment.setTextColor(WidgetTypes.CONTENT, mOptions.contentTextColor, mOptions.textSize);
         }
         //设置确认按钮字体颜色
         if (mOptions.conformTextColor != null) {
-            mDialogFragment.setTextColor(WidgetTypes.CONFORM, mOptions.conformTextColor);
+            mDialogFragment.setTextColor(WidgetTypes.CONFORM, mOptions.conformTextColor, mOptions.textSize);
         }
         //设置取消按钮字体颜色
         if (mOptions.cancelTextColor != null) {
-            mDialogFragment.setTextColor(WidgetTypes.CANCEL, mOptions.cancelTextColor);
+            mDialogFragment.setTextColor(WidgetTypes.CANCEL, mOptions.cancelTextColor, mOptions.textSize);
         }
         //标题隐藏
         mDialogFragment.hideTitle(mOptions.isTitleHided);
